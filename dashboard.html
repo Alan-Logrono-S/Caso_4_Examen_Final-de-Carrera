@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETS ASISTENCIA TECNICA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <section>
+                <div>
+                    <span id="bienvenido-user"></span>
+                    <button onclick="logout()" id="btn-logout">CERRAR SESION</button>
+                </div>
+            </section>
+
+            <nav>
+                <button onclick="seccion('clientes')">Clients</button>
+                <button onclick="seccion('tecnicos')">Tecnicos</button>
+                <button onclick="seccion('tickets')">Tickets</button>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <main>
+            <div>
+               <!--CLIENTES-->
+                <section id="sec-clientes" class="modulo">
+                    <h1>SECCION CLIENTES</h1> 
+                    <form id="form-clientes">
+                        <input type="hidden" id="cli._id">
+                        <input type="text" id="cli-cedula" required placeholder="Cedula">
+                        <input type="text" id="cli-nombre" required placeholder="Nombre">
+                        <input type="text" id="cli-apellido" required placeholder="Apellido">
+                        <input type="text" id="cli-ciudad" required placeholder="Ciudad">
+                        <input type="email" id="cli-email" required placeholder="Email">
+                        <input type="text" id="cli-direccion" required placeholder="Direccion">
+                        <input type="text" id="cli-telefono" required placeholder="Telefono">
+                        <div>
+                            <label class="into-group">Fecha de Nacimiento</label>
+                            <input type="date" id="cli-fecha" required>
+                        </div>
+                        <input type="text" id="cli-dependencia" required placeholder="Dependencia">
+
+                        <button id="btn-save">INGRESAR INFORMACION</button>
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cedula</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Ciudad</th>
+                                <th>Email</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Fecha</th>
+                                <th>Dependencia</th>
+
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-clientes"></tbody>
+                    </table>
+                </section>
+
+
+
+                <!--TECNICOS-->
+                <section id="sec-tecnicos" class="modulo" style="display: none;">
+                    <h1>SECCION TECNICOS</h1> 
+                    <form id="form-tecnicos">
+                        <input type="hidden" id="tec._id">
+                        <input type="text" id="tec-nombre" required placeholder="Nombre">
+                        <input type="text" id="tec-apellido" required placeholder="Apellido">
+                        <input type="text" id="tec-cedula" required placeholder="Cedula">
+                        <div>
+                            <label class="into-group">Fecha de Nacimiento</label>
+                            <input type="date" id="tec-fecha" required>
+                        </div>
+                        <input type="text" id="tec-genero" required placeholder="Genero">
+                        <input type="text" id="tec-ciudad" required placeholder="Ciudad">
+                        <input type="text" id="tec-direccion" required placeholder="Direccion">
+                        <input type="text" id="tec-telefono" required placeholder="Telefono">
+                        <input type="email" id="tec-email" required placeholder="Email">
+
+                        <button id="btn-save">INGRESAR INFORMACION</button>
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Cedula</th>
+                                <th>Fecha Nacimiento</th>
+                                <th>Genero</th>
+                                <th>Ciudad</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Email</th>
+
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-tecnicos"></tbody>
+                    </table>
+                </section>
+
+
+
+                <!--TICKETS-->
+                <section id="sec-tickets" class="modulo" style="display: none;">
+                    <h1>SECCION TICKETS</h1> 
+                    <form id="form-tickets">
+                        <input type="hidden" id="ti._id">
+                        <input type="text" id="ti-codigo" required placeholder="Codigo">
+                        <textarea id="ti-descripcion" required placeholder="Descripcion"></textarea>
+                        <input type="text" id="ti-tecnico" required placeholder="Tecnico">
+                        <input type="text" id="ti-cliente" required placeholder="Cliente">
+
+                        <button id="btn-save">INGRESAR INFORMACION</button>
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Descripcion</th>
+                                <th>Tecnico</th>
+                                <th>Cliente</th>
+
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-tickets"></tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
