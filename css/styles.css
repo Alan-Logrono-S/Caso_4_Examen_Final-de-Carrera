@@ -1,0 +1,69 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#body-login{
+    display:flex;
+    background-image: url(/img/Background-Bundle-Graphics-49236652-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    align-items: center;
+    text-align: center;
+    display:flex;
+
+    content: normal;
+    padding: 8rem;
+    border-radius: 16px;
+}
+
+.main-login{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    content: normal;
+    padding: 8rem;
+    border-radius: 16px;
+}
+
+#section-login{
+    display:flex;
+    background-color:rgba(255, 255, 255, 0.20);
+    align-items: center;
+    text-align: center;
+    content: normal;
+    padding: 8rem;
+    border-radius: 16px;
+
+
+}
+
+#form-login{
+    
+    background-color: aquamarine;
+    align-items: center;
+    text-align: center;
+}
+
+.label-login{
+    background-color: blue;
+}
+
+#email{
+    border-radius: 16px;
+}
+
+#password{
+    border-radius: 16px;
+}
+
+
+#btn-login{
+    color: aliceblue;
+    background-color: grey;
+    border-radius: 16px;
+}
+#btn-login:hover{
+    background-color: aqua;
+}
+
+
