@@ -1,19 +1,15 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 #body-login{
     display:flex;
     background-image: url(/img/Background-Bundle-Graphics-49236652-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 96vh;
     align-items: center;
     text-align: center;
-    display:flex;
-
-    content: normal;
-    padding: 8rem;
-    border-radius: 16px;
 }
 
 .main-login{
@@ -23,11 +19,16 @@
     content: normal;
     padding: 8rem;
     border-radius: 16px;
+    margin: auto;
+}
+
+.label-login{
+    align-items: center;
 }
 
 #section-login{
     display:flex;
-    background-color:rgba(255, 255, 255, 0.20);
+    background-color:rgba(255, 255, 255, 0.25);
     align-items: center;
     text-align: center;
     content: normal;
@@ -37,33 +38,201 @@
 
 }
 
+#section-login:hover{
+    transform:scale(1.03);
+}
+
+
 #form-login{
-    
-    background-color: aquamarine;
+    color: white;
     align-items: center;
     text-align: center;
+    border-color: aliceblue;
+    border: none;
 }
 
 .label-login{
-    background-color: blue;
+    color: aliceblue;
+    justify-content: center;
+    margin: 1rem;
 }
 
 #email{
     border-radius: 16px;
+    color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.20);
 }
 
 #password{
     border-radius: 16px;
+    color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.20);
+
 }
 
 
 #btn-login{
+    
+    padding: 6%;
     color: aliceblue;
     background-color: grey;
     border-radius: 16px;
+    border:none;
 }
 #btn-login:hover{
-    background-color: aqua;
+    background-color:white;
+    color: black;
+    border:none;
+
 }
 
 
+#bienvenido-user{
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+#btn-logout{
+    width: 100%; 
+    padding: 0.7rem; 
+    background-color: red; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+    
+
+#btn-logout:hover{
+    background-color:white;
+    color: black;
+    border:none;
+    cursor: pointer; 
+
+}
+
+#dash-body{
+    background-image: url(/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.webp);
+}
+
+#clientes-btn{
+    display: block;
+    background: green;
+    color:white;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+#clientes-btn:hover{
+    background-color:white;
+    color: black;
+    border:none;
+    cursor: pointer; 
+
+}
+
+#tecnicos-btn{
+    display: block;
+    background: green;
+    color:white;
+    border-radius: 16px;
+    padding: 1rem;
+    
+}
+
+#tecnicos-btn:hover{
+    background-color:white;
+    color: black;
+    border:none;
+    cursor: pointer; 
+
+}
+
+#tickets-btn{
+    display: block;
+    background: green;
+    color:white;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+#tickets-btn:hover{
+    background-color:white;
+    color: black;
+    border:none;
+    cursor: pointer; 
+
+}
+
+label { display: block; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.9rem; 
+}
+input { width: 100%; 
+    padding: 0.5rem; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+button { 
+    width: 100%; 
+    padding: 0.7rem; 
+    background-color: #4CAF50; 
+    color: white; border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold; }
+
+button:hover { 
+    background-color: #45a049;
+ }
+.error-visible { color: white;
+     background: #e74c3c;
+    padding: 10px;
+    border-radius: 4px;
+     margin-top: 10px;
+      text-align: center;
+       font-size: 0.8rem; }
+
+.error-hidden { 
+    display: none; 
+}
+td button {
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 0.8rem;
+    display: inline-block;
+    width: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td button {
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 0.8rem;
+    display: inline-block; /* Para que se pongan uno al lado del otro */
+    width: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}

@@ -6,22 +6,24 @@
     <title>LOGIN</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <main>
-        <section id="sectiom-login">
-            <h1>LOGIN USUARIO</h1>
-            <form id="form-login">
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="ejemplo@correo.comn">
-                </div>
-                <div>
-                    <label for="password">Clave</label>
-                    <input type="password" id="password" required placeholder="******">
-                </div>
-                <button id="btn-login">INGRESAR</button>
-            </form>
-            <div id="errorRespuesta" class="errorHiden"></div>
+<body id="body-login">
+    <main class="main-login">
+        <section id="section-login">
+            <div id="card-login">
+                <h1 id="login-title">LOGIN</h1>
+                <form id="form-login">
+                    <div class="label-login">
+                        <label  class= "label-login" for="email">Email</label>
+                        <input type="email" id="email" required placeholder="ejemplo@correo.comn">
+                    </div>
+                    <div class="label-login">
+                        <label class= "label-login" for="password">Clave</label>
+                        <input type="password" id="password" required placeholder="******">
+                    </div>
+                    <button id="btn-login">INGRESAR</button>
+                </form>
+                <div id="errorRespuesta" class="errorHiden"></div>
+            </div>
         </section>
     </main>
 </body>

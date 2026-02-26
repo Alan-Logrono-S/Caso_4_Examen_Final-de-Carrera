@@ -6,7 +6,7 @@
     <title>TICKETS ASISTENCIA TECNICA</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id= "dash-body">
     <header>
         <div>
             <section>
@@ -17,9 +17,9 @@
             </section>
 
             <nav>
-                <button onclick="seccion('clientes')">Clients</button>
-                <button onclick="seccion('tecnicos')">Tecnicos</button>
-                <button onclick="seccion('tickets')">Tickets</button>
+                <button id= "clientes-btn" onclick="seccion('clientes')">Clientes</button>
+                <button id= "tecnicos-btn"  onclick="seccion('tecnicos')">Tecnicos</button>
+                <button id= "tickets-btn" onclick="seccion('tickets')">Tickets</button>
             </nav>
         </div>
     </header>
@@ -31,17 +31,25 @@
                     <h1>SECCION CLIENTES</h1> 
                     <form id="form-clientes">
                         <input type="hidden" id="cli._id">
+                        
                         <input type="text" id="cli-cedula" required placeholder="Cedula">
+                        
                         <input type="text" id="cli-nombre" required placeholder="Nombre">
+                        
                         <input type="text" id="cli-apellido" required placeholder="Apellido">
+                        
                         <input type="text" id="cli-ciudad" required placeholder="Ciudad">
+                        
                         <input type="email" id="cli-email" required placeholder="Email">
+                        
                         <input type="text" id="cli-direccion" required placeholder="Direccion">
+                        
                         <input type="text" id="cli-telefono" required placeholder="Telefono">
                         <div>
                             <label class="into-group">Fecha de Nacimiento</label>
                             <input type="date" id="cli-fecha" required>
                         </div>
+                        
                         <input type="text" id="cli-dependencia" required placeholder="Dependencia">
 
                         <button id="btn-save">INGRESAR INFORMACION</button>
@@ -73,17 +81,25 @@
                     <h1>SECCION TECNICOS</h1> 
                     <form id="form-tecnicos">
                         <input type="hidden" id="tec._id">
+                        
                         <input type="text" id="tec-nombre" required placeholder="Nombre">
+                        
                         <input type="text" id="tec-apellido" required placeholder="Apellido">
+                        
                         <input type="text" id="tec-cedula" required placeholder="Cedula">
                         <div>
                             <label class="into-group">Fecha de Nacimiento</label>
                             <input type="date" id="tec-fecha" required>
                         </div>
+                        
                         <input type="text" id="tec-genero" required placeholder="Genero">
+                        
                         <input type="text" id="tec-ciudad" required placeholder="Ciudad">
+                        
                         <input type="text" id="tec-direccion" required placeholder="Direccion">
+                        
                         <input type="text" id="tec-telefono" required placeholder="Telefono">
+                        
                         <input type="email" id="tec-email" required placeholder="Email">
 
                         <button id="btn-save">INGRESAR INFORMACION</button>
@@ -114,12 +130,16 @@
                 <section id="sec-tickets" class="modulo" style="display: none;">
                     <h1>SECCION TICKETS</h1> 
                     <form id="form-tickets">
+                        
                         <input type="hidden" id="ti._id">
+                        <label><strong>Codigo:</strong></label>
                         <input type="text" id="ti-codigo" required placeholder="Codigo">
+                        <label><strong>Descripcion</strong></label>
                         <textarea id="ti-descripcion" required placeholder="Descripcion"></textarea>
-                        <input type="text" id="ti-tecnico" required placeholder="Tecnico">
-                        <input type="text" id="ti-cliente" required placeholder="Cliente">
-
+                        <label><strong>Tecnico</strong><label>
+                        <select id="ti-tecnico" required><option value="">Seleccionar Tecnico</option></select>
+                        <label><strong>Cliente</strong><label>
+                        <select id="ti-cliente" required><option value="">Seleccionar Cliente</option></select>
                         <button id="btn-save">INGRESAR INFORMACION</button>
                     </form>
                     <table>

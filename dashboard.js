@@ -1,4 +1,4 @@
-API_URL = "http://localhost:4000/api";
+API_URL = "https://caso4-ticketsdb.onrender.com/api";
 
 let globalClientes = [] , globalTecnicos = [] , globalTickets= [];
 
@@ -35,7 +35,7 @@ async function listarClientes() {
             <td>${cli.dependencia}</td>
             <td>
                 <button class="btn-edit" onClick="agregarClientes('${cli._id}')">Editar</button>
-                <button class="btn-delete" on onClick="eliminar('estudiantes','${cli._id}')">Eliminar</button>
+                <button class="btn-delete" onClick="eliminar('clientes','${cli._id}')">Eliminar</button>
             </td>
         </tr>`
     ).join('')
@@ -86,7 +86,7 @@ function agregarClientes(id){
     document.getElementById('cli-fecha').value = c.fecha_nacimiento ? c.fecha_nacimiento.split('T')[0]: '';
     document.getElementById('cli-dependencia').value = c.dependencia;
 
-    window(0,0);
+    window.scrollTo(0,0);
 }
 
 // ========== TECNICOS ==========
@@ -160,7 +160,7 @@ function agregarTecnicos(id){
     document.getElementById('tec-direccion').value = t.direccion;
     document.getElementById('tec-telefono').value = t.telefono;
     document.getElementById('tec-email').value = t.email;
-    window(0,0);
+    window.scrollTo(0,0);
 }
 
 // ========== TICKETS ==========
@@ -211,7 +211,7 @@ document.getElementById('form-tickets').addEventListener('submit', async (e)=>{
 });
 
 function agregarTickets(id){
-    const ti = globalClientes.find(x=> x._id === id);
+    const ti = globalTickets.find(x=> x._id === id);
     if(!ti) return
 
     document.getElementById('ti._id').value = ti._id;
@@ -219,24 +219,23 @@ function agregarTickets(id){
     document.getElementById('ti-descripcion').value = ti.descripcion;
     document.getElementById('ti-cliente').value = ti.id_cliente;
     document.getElementById('ti-tecnico').value = ti.id_tecnico;
-    window(0,0);
+    window.scrollTo(0,0);
 }
 
 // ========== FUNCIONES ==========
 
-async function eliminar(entidad,id) {
-    if(confirm('¿Quiere eliminar este Registro?')){
+async function eliminar(entidad, id) {
+    if(confirm('¿Eliminar Informacion?')){
         await fetch(`${API_URL}/${entidad}/${id}`,{
-            method:'DELETE'
+            method: 'DELETE'
         });
-    }
+    };
     await obtenerTodo();
-    
 };
 
 function seccion(id){
-    document.querySelectorAll('.modulo').forEach(m => m.style.display = 'none;');
-    document.getElementById(`sec-${id}`).style.display = 'block';
+    document.querySelectorAll('.modulo').forEach(m => m.style.display=' none');
+    document.getElementById(`sec-${id}`).style.display ='block';
 }
 
 function logout(){

@@ -3,7 +3,7 @@ const respuestaDiv = document.querySelector('#errorRespuesta');
 document.querySelector('#form-login').addEventListener('submit', async (e)=>{
     e.preventDefault()
     try{
-        const res= await fetch('http://localhost:4000/api/usuarios/login',{
+        const res= await fetch('https://caso4-ticketsdb.onrender.com/api/usuarios/login',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
@@ -19,7 +19,7 @@ document.querySelector('#form-login').addEventListener('submit', async (e)=>{
         localStorage.setItem('usuario', JSON.stringify(data));
 
         window.location.href = 'dashboard.html';
-        
+
     }catch(error){
         respuestaDiv.textContent = error.message;
 
